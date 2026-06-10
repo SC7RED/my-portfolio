@@ -4,7 +4,7 @@
 
 My personal corner of the internet — who I am, what I'm studying, and what I'm building.
 
-**[Check it out live →](https://my-portfolio-two-gules-23.vercel.app)**
+**[Check it out live →](https://dennis.delenyan.com)**
 
 <br/>
 
@@ -61,6 +61,6 @@ GitHub by itself, or fill the fields in manually for anything that isn't on GitH
 
 <div align="center">
 
-© 2026 Dennis Delenyan · [LinkedIn](https://www.linkedin.com/in/dennis-delenyan-03987a2aa/) · [GitHub](https://github.com/SC7RED)
+© 2026 Dennis Delenyan · [LinkedIn](https://www.linkedin.com/in/dennis-delenyan/) · [GitHub](https://github.com/SC7RED)
 
 </div>
