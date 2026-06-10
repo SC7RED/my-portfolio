@@ -14,8 +14,9 @@ dist/
 .vscode/
 .DS_Store
 
-# Claude Code local settings (personal, per-machine)
-.claude/settings.local.json
+# Local tool settings / notes
+.claude/
+CLAUDE.md
 
 # Logs
 *.log
