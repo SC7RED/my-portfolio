@@ -23,16 +23,16 @@ export function Contact() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Honeypot — real visitors never see or fill this field.
-    const honeypot = new FormData(event.currentTarget).get("company");
+    // Honeypot — real visitors never see or fill this field. `_gotcha` is
+    // Formspree's own convention, so it's filtered server-side too.
+    const honeypot = new FormData(event.currentTarget).get("_gotcha");
     if (typeof honeypot === "string" && honeypot.length > 0) return;
 
     const nextErrors = validateContact(values);
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
-    if (!formspreeId || formspreeId === "your-form-id") {
+    if (!site.formspreeId) {
       setStatus("error");
       setStatusMessage(
         `The form isn't connected to Formspree yet (see README) — meanwhile, email me directly at ${site.email}.`,
@@ -42,7 +42,7 @@ export function Contact() {
 
     setStatus("sending");
     try {
-      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const response = await fetch(`https://formspree.io/f/${site.formspreeId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(values),
@@ -71,7 +71,7 @@ export function Contact() {
           <form onSubmit={handleSubmit} noValidate className="flex max-w-[640px] flex-col gap-5">
             <input
               type="text"
-              name="company"
+              name="_gotcha"
               tabIndex={-1}
               autoComplete="off"
               aria-hidden="true"

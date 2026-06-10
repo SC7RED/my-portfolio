@@ -34,7 +34,8 @@ default and canonical look; light mode is a first-class inversion of the same to
 - Animations are intentionally subtle (gentle reveals, small hover lifts, the purple
   GitHub-button glow). Keep them that way, and always respect reduced motion
   (`useReducedMotion` in JS, `prefers-reduced-motion` in CSS).
-- The contact form posts to Formspree using `VITE_FORMSPREE_ID` (see README); it must
-  keep working gracefully (clear message, email fallback) when the ID is unset.
+- The contact form posts to Formspree using `formspreeId` from `site.ts` (the ID is
+  public by design); it must keep working gracefully (clear message, email fallback)
+  if the ID is ever empty.
 - GitHub project data is fetched client-side with sessionStorage caching and static
   fallbacks — never let a failed API call break the projects grid.

@@ -26,15 +26,14 @@ npm run build    # type-check + production build
 npm run preview  # serve the production build locally
 ```
 
-## Connecting the contact form (one-time setup)
+## Contact form
 
-1. Create a free account at [formspree.io](https://formspree.io) and add a new form.
-2. Copy the form ID from its endpoint URL: `https://formspree.io/f/<FORM_ID>`.
-3. Copy `.env.example` to `.env` and set `VITE_FORMSPREE_ID=<FORM_ID>`.
-4. For production, add the same `VITE_FORMSPREE_ID` variable in Vercel
-   (Project → Settings → Environment Variables).
-
-Until the ID is set, the form validates input but tells visitors to use email instead.
+The form posts to [Formspree](https://formspree.io); the form ID lives in
+`src/scripts/site.ts` (`formspreeId`). The ID is public by design — it's visible in
+the browser's network requests either way, and Formspree's spam protection plus the
+form's honeypot field handle abuse. To point at a different form, just change the ID.
+If `formspreeId` is ever emptied, the form degrades gracefully and tells visitors to
+use email instead.
 
 ## Editing content
 
@@ -49,6 +48,7 @@ anything not on GitHub.
 1. Push this repo to GitHub.
 2. Go to [vercel.com/new](https://vercel.com/new) and import the repo — Vercel
    auto-detects Vite, no configuration needed.
-3. Add the `VITE_FORMSPREE_ID` environment variable.
-4. Deploy. Afterwards, update the Open Graph URLs in `index.html` and the
+3. Deploy. Afterwards, update the Open Graph URLs in `index.html` and the
    live-demo link above with your real domain.
+
+The site is already connected this way — every push to `main` deploys automatically.
