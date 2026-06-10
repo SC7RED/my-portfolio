@@ -9,8 +9,7 @@ export const site = {
   githubUrl: "https://github.com/SC7RED",
   /** Formspree form ID — the code after /f/ in the form's endpoint URL. */
   formspreeId: "mkoavwkk",
-  /** TODO: paste your LinkedIn profile URL here to show the LinkedIn link in the footer. */
-  linkedinUrl: "",
+  linkedinUrl: "https://www.linkedin.com/in/dennis-delenyan-03987a2aa/",
 };
 
 export interface ProjectEntry {
