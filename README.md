@@ -4,7 +4,7 @@ Personal portfolio site for Dennis Delenyan: a single-page, dark-first portfolio
 hero, about, projects, and contact section. Project cards can pull their details live
 from the GitHub API, and the contact form submits through Formspree.
 
-> **Live demo:** _coming soon_ <!-- paste the Vercel URL here after deploying -->
+> **Live demo:** https://my-portfolio-two-gules-23.vercel.app
 
 ![Screenshot placeholder](docs/screenshot.png) <!-- replace with a real screenshot -->
 
