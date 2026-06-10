@@ -9,7 +9,7 @@ export const site = {
   githubUrl: "https://github.com/SC7RED",
   /** Formspree form ID — the code after /f/ in the form's endpoint URL. */
   formspreeId: "mkoavwkk",
-  linkedinUrl: "https://www.linkedin.com/in/dennis-delenyan-03987a2aa/",
+  linkedinUrl: "https://www.linkedin.com/in/dennis-delenyan/",
 };
 
 export interface ProjectEntry {
@@ -36,7 +36,7 @@ export const projects: ProjectEntry[] = [
     repo: "SC7RED/school-cellular-study",
     title: "School Cellular Study",
     description:
-      "A study of cellular network behavior at school — code and findings live in the GitHub repo.",
-    tags: ["C++"],
+      "Designing and testing a passive Yagi-Uda antenna to improve LTE reception inside my school — RF measurements, tower analysis, and antenna construction.",
+    tags: ["RF", "Antenna Design", "LTE"],
   },
 ];
