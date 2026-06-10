@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment (keep .env.example)
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Claude Code local settings (personal, per-machine)
+.claude/settings.local.json
+
+# Logs
+*.log
+npm-debug.log*
