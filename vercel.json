@@ -1,4 +1,4 @@
 {
   "redirects": [{ "source": "/lappal", "destination": "/lappal/", "permanent": false }],
-  "rewrites": [{ "source": "/lappal/:path*", "destination": "https://lappal.vercel.app/:path*" }]
+  "rewrites": [{ "source": "/lappal/:path*", "destination": "https://lappal-alpha.vercel.app/:path*" }]
 }
