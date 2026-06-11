@@ -33,6 +33,14 @@ export interface ProjectEntry {
  */
 export const projects: ProjectEntry[] = [
   {
+    repo: "SC7RED/lappal",
+    title: "lappal",
+    description:
+      "An interactive audiovisual keyboard — every keypress fires a neon animation and a harmonized note. Built with React, p5.js, and Tone.js.",
+    tags: ["React", "p5.js", "Tone.js"],
+    href: "https://dennis.delenyan.com/lappal/",
+  },
+  {
     repo: "SC7RED/school-cellular-study",
     title: "School Cellular Study",
     description:

@@ -23,12 +23,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const reduceMotion = useReducedMotion();
   const repoData = useGitHubRepo(project.repo);
 
-  // Live GitHub data wins; the entry's own fields are the fallback.
+  // Live GitHub data wins for text; an entry's own href wins for the link so a
+  // card can point at a live site instead of the repo.
   const title = repoData?.name ? titleFromRepoName(repoData.name) : project.title;
   const description = repoData?.description || project.description;
   const href =
-    repoData?.htmlUrl ??
     project.href ??
+    repoData?.htmlUrl ??
     (project.repo ? `https://github.com/${project.repo}` : undefined);
   const tags = [
     ...new Set([...(repoData?.language ? [repoData.language] : []), ...project.tags]),
